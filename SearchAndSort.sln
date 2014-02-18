@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAndSort", "SearchAndSort\SearchAndSort.csproj", "{ED460D0E-53D6-4BD9-B7B5-836A68016C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAndSort.UnitTest", "SearchAndSort.UnitTest\SearchAndSort.UnitTest.csproj", "{E2F03D3C-A95F-4B78-91B6-9F328E265D1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED460D0E-53D6-4BD9-B7B5-836A68016C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED460D0E-53D6-4BD9-B7B5-836A68016C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED460D0E-53D6-4BD9-B7B5-836A68016C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED460D0E-53D6-4BD9-B7B5-836A68016C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F03D3C-A95F-4B78-91B6-9F328E265D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F03D3C-A95F-4B78-91B6-9F328E265D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F03D3C-A95F-4B78-91B6-9F328E265D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F03D3C-A95F-4B78-91B6-9F328E265D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
