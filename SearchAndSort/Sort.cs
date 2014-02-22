@@ -84,6 +84,30 @@ namespace SearchAndSort
         }
 
         /// <summary>
+        /// Insertion sort implementation.
+        /// </summary>
+        /// <typeparam name="T">Array type</typeparam>
+        /// <param name="array">Array with elements to be sorted</param>
+        public static void InsertionSort<T> (T[] array) where T: IComparable<T>
+        {
+            for (int i = 1; i < array.Length; i++)
+            {
+                for (int j = i; j > 0; j--)
+                {
+                    if (array[j-1].CompareTo(array[j]) > 0)
+                    {
+                        Swap(array, j - 1, j);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+
+        /// <summary>
         /// Bubble sort implementation
         /// </summary>
         /// <typeparam name="T">Array type</typeparam>
