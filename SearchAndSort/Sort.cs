@@ -13,6 +13,54 @@ namespace SearchAndSort
     {
      
         /// <summary>
+        /// In place quicksort implementation.
+        /// </summary>
+        /// <typeparam name="T">Array type</typeparam>
+        /// <param name="array">Array with elements to be sorted</param>
+        public static void QuickSort<T>(T[] array) where T: IComparable<T>
+        {
+            if (array != null || array.Length != 0 || array.Length != 1)
+            {
+                QuickSort(array, 0, array.Length - 1);
+            }
+        }
+
+        private static void QuickSort<T>(T[] array, int left, int right) where T: IComparable<T>
+        {
+            if (left < right)
+            {
+                int pivotIndex = left + (right - left) / 2; // Very basic and naive pivoting
+
+                int sortedIndex = Partition(array, left, right, pivotIndex);
+
+                QuickSort(array, left, sortedIndex - 1);
+
+                QuickSort(array, sortedIndex + 1, right);
+            }
+        }
+
+        private static int Partition<T>(T[] array, int left, int right, int pivotIndex) where T: IComparable<T>
+        {
+            Swap(array, pivotIndex, right);
+
+            int sortedIndex = left;
+
+            for (int i = left; i < right; i++)
+            {
+                if (array[i].CompareTo(array[right]) < 0)
+                {
+                    Swap(array, i, sortedIndex);
+                    sortedIndex++;
+                }
+            }
+
+            Swap(array, sortedIndex, right);
+
+            return sortedIndex;
+        }
+
+
+        /// <summary>
         /// Merge sort implementation
         /// </summary>
         /// <typeparam name="T">Array type</typeparam>
@@ -76,7 +124,7 @@ namespace SearchAndSort
         /// <param name="list">Array</param>
         /// <param name="pos1">Position of the first element</param>
         /// <param name="pos2">Position of the second element</param>
-        public static void Swap<T> (T[] list, int pos1, int pos2)
+        private static void Swap<T> (T[] list, int pos1, int pos2)
         {
             if (list == null)
             {

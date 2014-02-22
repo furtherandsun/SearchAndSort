@@ -11,6 +11,35 @@ namespace SearchAndSort.UnitTest
     {
 
         [TestMethod]
+        public void QuickSort_IntegerArray_SortedAscending()
+        {
+            //arrange
+            var values = new int[] { 5, 1, 3, -2, -8 };
+            var sortedValues = new int[] { -8, -2, 1, 3, 5 };
+
+            //act
+            Sort.QuickSort<int>(values);
+
+            //assert
+            CollectionAssert.AreEqual(values, sortedValues);
+        }
+
+        [TestMethod]
+        public void QuickSort_StringArray_SortedAscending()
+        {
+            //arrange
+            var values = new string[] { "kalle", "per", "Isa", "adam", "Anna" };
+            var sortedValues = new string[] { "adam", "Anna", "Isa", "kalle", "per" };
+
+            //act
+            Sort.QuickSort<string>(values);
+
+            //assert
+            CollectionAssert.AreEqual(values, sortedValues);
+        }
+
+
+        [TestMethod]
         public void MergeSort_StringArray_SortedAscending()
         {
             //arrange
