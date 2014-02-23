@@ -19,7 +19,7 @@ namespace SearchAndSort
         /// <param name="array">Array with elements to be sorted</param>
         public static void QuickSort<T>(T[] array) where T: IComparable<T>
         {
-            if (array != null || array.Length != 0 || array.Length != 1)
+            if (array != null && array.Length != 0 && array.Length != 1)
             {
                 QuickSort(array, 0, array.Length - 1);
             }
@@ -90,6 +90,11 @@ namespace SearchAndSort
         /// <param name="array">Array with elements to be sorted</param>
         public static void InsertionSort<T> (T[] array) where T: IComparable<T>
         {
+            if (array == null || array.Length == 0 || array.Length == 1)
+            {
+                return;
+            }
+
             for (int i = 1; i < array.Length; i++)
             {
                 for (int j = i; j > 0; j--)

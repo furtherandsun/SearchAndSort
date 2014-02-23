@@ -11,6 +11,21 @@ namespace SearchAndSort.UnitTest
     {
 
         [TestMethod]
+        public void QuickSort_null_ExceptionNotThrown()
+        {
+            //act
+            try
+            {
+                Sort.QuickSort<int>(null);
+            }
+            catch (NullReferenceException e)
+            {
+                Assert.Fail("NullReferenceException thrown");
+            }
+
+        }
+
+        [TestMethod]
         public void QuickSort_IntegerArray_SortedAscending()
         {
             //arrange
@@ -38,6 +53,20 @@ namespace SearchAndSort.UnitTest
             CollectionAssert.AreEqual(values, sortedValues);
         }
 
+        [TestMethod]
+        public void MergeSort_null_ExceptionNotThrown()
+        {
+            
+            try
+            {
+                Sort.MergeSort<int>(null);
+            }
+            catch (NullReferenceException e)
+            {
+                Assert.Fail("NullReferenceException thrown");
+            }
+
+        }
 
         [TestMethod]
         public void MergeSort_StringArray_SortedAscending()
@@ -65,6 +94,22 @@ namespace SearchAndSort.UnitTest
 
             //assert
             CollectionAssert.AreEqual(result, sortedValues);
+        }
+
+
+        [TestMethod]
+        public void InsertionSort_null_ExceptionNotThrown()
+        {
+
+            try
+            {
+                Sort.InsertionSort<int>(null);
+            }
+            catch (NullReferenceException e)
+            {
+                Assert.Fail("NullReferenceException thrown");
+            }
+
         }
 
         [TestMethod]
@@ -96,6 +141,21 @@ namespace SearchAndSort.UnitTest
         }
 
         [TestMethod]
+        public void BubbleSort_null_ExceptionNotThrown()
+        {
+
+            try
+            {
+                Sort.BubbleSort<int>(null);
+            }
+            catch (NullReferenceException e)
+            {
+                Assert.Fail("NullReferenceException thrown");
+            }
+
+        }
+
+        [TestMethod]
         public void BubbleSort_IntegerArray_SortedAscending()
         {
             //arrange
@@ -104,7 +164,7 @@ namespace SearchAndSort.UnitTest
 
             //act
             Sort.BubbleSort<int>(values);
-            
+
             //assert
             CollectionAssert.AreEqual(values, sortedValues);
         }
